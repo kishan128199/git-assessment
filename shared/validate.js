@@ -1,5 +1,9 @@
 function isValidTitle(title) {
-  return typeof title === 'string' && title.trim().length > 0;
+  return typeof title === "string" && title.trim().length > 0;
 }
 
-module.exports = { isValidTitle };
+function isValidPriority(p) {
+  return ["low", "normal", "high"].includes(p);
+}
+
+module.exports = { isValidTitle, isValidPriority };
