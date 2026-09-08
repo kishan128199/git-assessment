@@ -21,3 +21,8 @@ step 4: git checkout -f answer/f3 HEAD to forcefully point the branch to the det
 ## G1
 
 step 1: switch in main branch and create new md file called contributors.md and add my github name and commit message to "Add github name to contributors list" and push the changes to remote repository
+
+## G2 Review pull request
+
+- review exsiting pull request and add comments to the code changes and submtting fdor the changes to be merged
+- add proper msg and summary of code review and submit the review
