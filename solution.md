@@ -32,3 +32,10 @@ step 1: switch in main branch and create new md file called contributors.md and 
 - step 1: run `git log --oneline  -13 upstream/seed/r1-upstream` to get the last 13 commits from the upstream repository
 - step 2: visualy match the commits with the local repository and find the missing commits
 - step 3: add commit hash with msg in REPORT.md letest to oldest order and commit the changes with message "docs: record incoming upstream commits"
+
+## R2
+
+- step 1: Create answer/r2 from seed/r2
+- step 2: Create new file called DEPLOY.md and add ingle line Deploys run from main into the file and commit the changes with message "docs: describe the deploy source"
+- step 3: run `git push --set-upstream origin answer/r2` to set the upstream branch and push the changes to remote repository. that makes relationship between local and remote branch and future push and pull will be easier
+- step 4: run `git push origin :seed/r2-stale` to delete the stale branch from remote repository
