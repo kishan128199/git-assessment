@@ -51,3 +51,11 @@ step 1: switch in main branch and create new md file called contributors.md and 
 - step 1: Create a new branch called answer/t1 from seed/t1
 - step 2: add lightweight tag `git tag build-t1` which used for just tagging only.
 - step 3: add annotated tag `git tag -a v1.0.0-t1 -m "TaskFlow 1.0.0"` which used for tagging with additional information.
+
+## T2
+
+- step 1: Create a new branch called answer/t2 from seed/t2
+- step 2: run `git ls-remote --tags` to list all the tags in the remote repository
+- step 3: run `git tag -f v1.0.0-t2 <commit-id>` to forcefully update the tag to point to the specific commit in the branch
+- step 4: run `git push origin v1.0.0-t2 --force` to forcefully push the updated tag to the remote repository
+- This steps make easy to move tag from one commit to another commit in the branch and also update the tag in the remote repository.
