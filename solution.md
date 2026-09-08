@@ -45,3 +45,9 @@ step 1: switch in main branch and create new md file called contributors.md and 
 - step 1: Create answer/r3 from seed/r3-local
 - step 2: run git rebase origin/seed/r3-remote to rebase the local branch with the remote branch
   Reason for rebase is to avoid merge commits and keep the history linear and clean. while git pull will create a merge commit and make the history messy. why I not choose git pull because it will create a merge commit and make the history messy.
+
+## T1
+
+- step 1: Create a new branch called answer/t1 from seed/t1
+- step 2: add lightweight tag `git tag build-t1` which used for just tagging only.
+- step 3: add annotated tag `git tag -a v1.0.0-t1 -m "TaskFlow 1.0.0"` which used for tagging with additional information.
