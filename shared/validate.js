@@ -6,4 +6,8 @@ function isValidPriority(p) {
   return ["low", "normal", "high"].includes(p);
 }
 
-module.exports = { isValidTitle, isValidPriority };
+function isValidDueDate(d) {
+  return !Number.isNaN(Date.parse(d));
+}
+
+module.exports = { isValidTitle, isValidPriority, isValidDueDate };
