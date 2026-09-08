@@ -17,3 +17,7 @@ step 1: first using git reflog find the detached commit hash then never point by
 step 2: git checkout --detach <commit-hash> to go into detached head state
 step 3: git add new file called health.js and add a simple health check route to the API server and commit message to "Add health check route"
 step 4: git checkout -f answer/f3 HEAD to forcefully point the branch to the detached commit and merge the changes from the detached commit into the branch
+
+## G1
+
+step 1: switch in main branch and create new md file called contributors.md and add my github name and commit message to "Add github name to contributors list"
