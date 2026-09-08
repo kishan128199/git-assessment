@@ -26,3 +26,9 @@ step 1: switch in main branch and create new md file called contributors.md and 
 
 - review exsiting pull request and add comments to the code changes and submtting fdor the changes to be merged
 - add proper msg and summary of code review and submit the review
+
+## R1
+
+- step 1: run `git log --oneline  -13 upstream/seed/r1-upstream` to get the last 13 commits from the upstream repository
+- step 2: visualy match the commits with the local repository and find the missing commits
+- step 3: add commit hash with msg in REPORT.md letest to oldest order and commit the changes with message "docs: record incoming upstream commits"
