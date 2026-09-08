@@ -39,3 +39,9 @@ step 1: switch in main branch and create new md file called contributors.md and 
 - step 2: Create new file called DEPLOY.md and add ingle line Deploys run from main into the file and commit the changes with message "docs: describe the deploy source"
 - step 3: run `git push --set-upstream origin answer/r2` to set the upstream branch and push the changes to remote repository. that makes relationship between local and remote branch and future push and pull will be easier
 - step 4: run `git push origin :seed/r2-stale` to delete the stale branch from remote repository
+
+## R3
+
+- step 1: Create answer/r3 from seed/r3-local
+- step 2: run git rebase origin/seed/r3-remote to rebase the local branch with the remote branch
+  Reason for rebase is to avoid merge commits and keep the history linear and clean. while git pull will create a merge commit and make the history messy. why I not choose git pull because it will create a merge commit and make the history messy.
