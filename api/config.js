@@ -1,5 +1,5 @@
 module.exports = {
-  port: 8080,
-  timeoutMs: 5000,
-  retries: 1,
+  port: 3000,
+  timeoutMs: 15000,
+  retries: 5,
 };
