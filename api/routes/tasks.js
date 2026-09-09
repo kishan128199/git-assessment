@@ -8,15 +8,13 @@ function json(res, body) {
 
 function routeTasks(req, res) {
   if (req.method === "GET") {
-    res.writeHead(200, { "content-type": "application/json" });
-    return res.end(JSON.stringify(tasks));
+    return json(res, tasks);
   }
   res.writeHead(405).end("method not allowed");
 }
 
 function routeArchive(req, res) {
-  res.writeHead(200, { "content-type": "application/json" });
-  res.end(JSON.stringify(archived));
+  json(res, archived);
 }
 
 module.exports = { routeTasks, routeArchive };
