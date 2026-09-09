@@ -116,3 +116,16 @@ module.exports = {
   - commit of "add lables route" change pick to reword to edit the commit message "Add labels route".
   - commit of "temp debug output" change pick to drop to remove the commit from the history.
   - commit of "Fetch labels from the client" did not change anything and keep it as pick.
+
+## I2
+
+- step 1: Create a new branch called answer/i2 from seed/i2
+- step 2: run `git rebase -i HEAD~4` to interactively
+- Step 4: When Git opens the commit message editor for the squash, remove "also export the array" from the message and keep only "Add comments route"
+- Step 5: The fixup combines the changes from fixup! Add comments test into Add comments test and keeps the commit message exactly:
+  ```
+  Add comments test
+  ```
+- step 5: Save and close the editor to complete the rebase. This will combine the four commits into a two-commit
+
+- Main difference between squash and fixup is that squash allows you to edit the commit message while fixup discards the commit message of the fixup commit and keeps the commit message of the original commit.
