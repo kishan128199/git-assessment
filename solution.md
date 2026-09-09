@@ -107,3 +107,12 @@ module.exports = {
 
 - step 1: Create a new branch called answer/v3 from seed/v3
 - step 2: run `git revert -m 1 <merge-commit-hash>` to revert the changes made in the specified merge commit. The `-m 1` option specifies that the first parent of the merge commit should be used as the mainline, which is necessary when reverting a merge commit. so undo the changes made in the merge commit while keeping the changes from the mainline branch.
+
+## I1
+
+- step 1: Create a new branch called answer/i1 from seed/i1
+- step 2: run `git rebase -i HEAD~3` to interactively rebase the last three commits. This allows you to modify the commit history by changing the order of commits, squashing commits together, or editing commit messages.
+- step 3: In the interactive rebase editor,
+  - commit of "add lables route" change pick to reword to edit the commit message "Add labels route".
+  - commit of "temp debug output" change pick to drop to remove the commit from the history.
+  - commit of "Fetch labels from the client" did not change anything and keep it as pick.
