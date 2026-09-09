@@ -140,3 +140,10 @@ module.exports = {
     for splitting 2 commits from 1 commit.
 - step 5: run `git rebase --continue` to continue the rebase process after splitting the commit into two separate commits. This will apply the remaining commits on top of the new commits and complete the rebase process.
 - step 7: re-run `git rebase -i HEAD~4` to interactively rebase for rearrange the commits and change the order of commits to make the history according to the instruction.
+
+## S1
+
+- step 1: Create new git clone using `git clone -b seed/split  git@github.com:kishan128199/git-assessment.git` to clone the remote repository to local machine.
+- step 2: Create verify commits of /slack/format.js and /slack/index.js files and run `git log --oneline` to verify the commits in the local repository.
+- step 3: run `git filter-repo --subdirectory-filter plugins/slack` to split the repository and keep only the history of the specified subdirectory. This will create a new repository with only the history of the /slack/format.js and /slack/index.js files.
+- step 4: Adding new remote repository using `git remote add origin git@github.com:kishan128199/taskflow-slack.git` to the new repository and run `git push -u origin main` to push the changes to the new remote repository. This will set the upstream branch for the main branch and allow you to easily push and pull changes in the future.
