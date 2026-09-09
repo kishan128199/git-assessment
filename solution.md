@@ -129,3 +129,14 @@ module.exports = {
 - step 5: Save and close the editor to complete the rebase. This will combine the four commits into a two-commit
 
 - Main difference between squash and fixup is that squash allows you to edit the commit message while fixup discards the commit message of the fixup commit and keeps the commit message of the original commit.
+
+## I3
+
+- step 1: Create a new branch called answer/i3 from seed/i3
+- step 2: run `git rebase -i HEAD~4` to interactively rebase the last four commits. This allows you to modify the commit history by changing the order of commits, squashing commits together, or editing commit messages.
+- step 3: In the interactive rebase editor, change `pick` to `edit` to commit 'Add archive support and tidy the task route' for splitting into 2 commits.
+- step 4: run `git reset 'HEAD^'` to unstage the changes from the commit and keep them in the working directory. This allows you to modify the changes before committing them again.
+  - Apply their required changes and run `git commit -m "Add archive support"` and `git commit -m "Tidy the task route"` to create the new commits.
+    for splitting 2 commits from 1 commit.
+- step 5: run `git rebase --continue` to continue the rebase process after splitting the commit into two separate commits. This will apply the remaining commits on top of the new commits and complete the rebase process.
+- step 7: re-run `git rebase -i HEAD~4` to interactively rebase for rearrange the commits and change the order of commits to make the history according to the instruction.
