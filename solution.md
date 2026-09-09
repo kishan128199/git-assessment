@@ -68,3 +68,17 @@ step 1: switch in main branch and create new md file called contributors.md and 
 - step 3: run `git push origin answer/m1` to push the changes to the remote repository. This will update the main branch in the remote repository with the changes from the feature branch.
 - step 4: run `git merge --no-ff seed/m1-feature` to merge the feature branch into the main branch with a merge commit. This will create a new commit that represents the merge of the two branches.
   - reason for using `--no-ff` is to create a merge commit and keep the history of the feature branch intact. This is useful for preserving the context of the changes made in the feature branch and for tracking the progress of the feature development.
+
+## M2
+
+step 1: Create a new branch called answer/m2 from seed/m2-main
+step 2: run `git merge origin/seed/m2-feature` to merge the feature branch into the main branch. This will create a new commit that represents the merge of the two branches.
+step 3: resolve conflicts in the config.js file by keeping the changes from the feature branch and removing the changes from the main branch. The final config.js file should look like this:
+
+```javascript
+module.exports = {
+  port: 3000,
+  timeoutMs: 15000,
+  retries: 5,
+};
+```
