@@ -96,3 +96,9 @@ module.exports = {
 - step 1: Create a new branch called answer/v1 from seed/v1
 - step 2: run `git revert <commit-hash>` to revert the changes made in the specified commit. This will create a new commit that undoes the changes made in the original commit.
   - reason for not using `git reset` is that it modifies the commit history and can cause issues for other collaborators who have already pulled the changes. `git revert` creates a new commit that undoes the changes, preserving the history and avoiding conflicts with other collaborators.
+
+## v2
+
+- step 1: Create a new branch called answer/v2 from seed/v2
+- step 2: run `git reset --soft HEAD~3` to reset the last three commits while keeping the changes in the staging area. This allows you to modify the changes before committing them again.
+- step 3: run `git commit -m "Add bearer token parsing"` to create a new commit with the modified changes. This will replace the previous three commits with a single commit that contains the updated changes.
