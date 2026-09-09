@@ -59,3 +59,12 @@ step 1: switch in main branch and create new md file called contributors.md and 
 - step 3: run `git tag -f v1.0.0-t2 <commit-id>` to forcefully update the tag to point to the specific commit in the branch
 - step 4: run `git push origin v1.0.0-t2 --force` to forcefully push the updated tag to the remote repository
 - This steps make easy to move tag from one commit to another commit in the branch and also update the tag in the remote repository.
+
+## M1
+
+- step 1: Create a new branch called answer/m1 from seed/m1-main
+- step 2: run `git merge --ff-only seed/m1-feature` to merge the feature branch into the main branch without creating a merge commit. This will fast-forward the main branch to include the changes from the feature branch.
+  - reason for using `--ff-only` is to avoid creating a merge commit and keep the history linear and clean. If the feature branch has diverged from the main branch, the merge will fail and you will need to resolve the conflicts before merging.
+- step 3: run `git push origin answer/m1` to push the changes to the remote repository. This will update the main branch in the remote repository with the changes from the feature branch.
+- step 4: run `git merge --no-ff seed/m1-feature` to merge the feature branch into the main branch with a merge commit. This will create a new commit that represents the merge of the two branches.
+  - reason for using `--no-ff` is to create a merge commit and keep the history of the feature branch intact. This is useful for preserving the context of the changes made in the feature branch and for tracking the progress of the feature development.
