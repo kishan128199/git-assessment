@@ -82,3 +82,11 @@ module.exports = {
   retries: 5,
 };
 ```
+
+## M3
+
+- step 1: Create a new branch called answer/m3 from seed/m3-main
+- step 2: run `git rebase origin/seed/m3-feature` to rebase the feature branch onto the main branch. This will apply the changes from the feature branch on top of the main branch, creating a linear history.
+- step 3: resolve conflicts in the config.js file by keeping the changes from the feature branch and removing the changes from the main branch.
+- run `git rebase --continue` to continue the rebase process after resolving the conflicts. This will apply the remaining commits from the feature branch onto the main branch.
+- run `git rebase --abort` to abort the rebase process and return to the state before the rebase if you encounter any issues or decide not to proceed with the rebase.
