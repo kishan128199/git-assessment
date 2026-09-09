@@ -90,3 +90,9 @@ module.exports = {
 - step 3: resolve conflicts in the config.js file by keeping the changes from the feature branch and removing the changes from the main branch.
 - run `git rebase --continue` to continue the rebase process after resolving the conflicts. This will apply the remaining commits from the feature branch onto the main branch.
 - run `git rebase --abort` to abort the rebase process and return to the state before the rebase if you encounter any issues or decide not to proceed with the rebase.
+
+## V1
+
+- step 1: Create a new branch called answer/v1 from seed/v1
+- step 2: run `git revert <commit-hash>` to revert the changes made in the specified commit. This will create a new commit that undoes the changes made in the original commit.
+  - reason for not using `git reset` is that it modifies the commit history and can cause issues for other collaborators who have already pulled the changes. `git revert` creates a new commit that undoes the changes, preserving the history and avoiding conflicts with other collaborators.
