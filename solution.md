@@ -147,3 +147,12 @@ module.exports = {
 - step 2: Create verify commits of /slack/format.js and /slack/index.js files and run `git log --oneline` to verify the commits in the local repository.
 - step 3: run `git filter-repo --subdirectory-filter plugins/slack` to split the repository and keep only the history of the specified subdirectory. This will create a new repository with only the history of the /slack/format.js and /slack/index.js files.
 - step 4: Adding new remote repository using `git remote add origin git@github.com:kishan128199/taskflow-slack.git` to the new repository and run `git push -u origin main` to push the changes to the new remote repository. This will set the upstream branch for the main branch and allow you to easily push and pull changes in the future.
+
+## S2
+
+- step 1: Create new git clone using `git clone -b seed/split  git@github.com:kishan128199/git-assessment.git` to clone the remote repository to local machine.
+- step 2: Create verify commits of /slack/format.js and /slack/index.js files and run `git log --oneline` to verify the commits in the local repository.
+- step 3: run `git filter-repo --path plugins/` to split the repository and keep only the history of the specified path. This will create a new repository with only the history of the /plugins/ directory.
+- step 4: Adding new remote repository using `git remote add origin git@github.com:kishan128199/taskflow-plugins.git` to the new repository and run `git push -u origin main` to push the changes to the new remote repository. This will set the upstream branch for the main branch and allow you to easily push and pull changes in the future.
+
+- Difference between `--subdirectory-filter` and `--path` is `--subdirectory-filter` make folder structure flat and remove the parent directories, while `--path` keep the folder structure intact and keep the parent directories. In this case, `--subdirectory-filter` is used to keep only the history of the /slack/ directory and remove the parent directories, while `--path` is used to keep only the history of the /plugins/ directory and keep the parent directories.
