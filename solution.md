@@ -102,3 +102,8 @@ module.exports = {
 - step 1: Create a new branch called answer/v2 from seed/v2
 - step 2: run `git reset --soft HEAD~3` to reset the last three commits while keeping the changes in the staging area. This allows you to modify the changes before committing them again.
 - step 3: run `git commit -m "Add bearer token parsing"` to create a new commit with the modified changes. This will replace the previous three commits with a single commit that contains the updated changes.
+
+## v3
+
+- step 1: Create a new branch called answer/v3 from seed/v3
+- step 2: run `git revert -m 1 <merge-commit-hash>` to revert the changes made in the specified merge commit. The `-m 1` option specifies that the first parent of the merge commit should be used as the mainline, which is necessary when reverting a merge commit. so undo the changes made in the merge commit while keeping the changes from the mainline branch.
